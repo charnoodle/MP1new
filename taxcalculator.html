@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link href="img/BIR favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <title>Tax Calculator - Bureau of Internal Revenue</title>
+  </head>
+<body>
+
+
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/BIR FULL LOGO WITH NAME AND ROP white font smaller.png"  style="max-width: auto; max-height:auto; height: 60px; margin-top: 0; margin-left: 0px; text-align: left;" />
+          </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-0 mb-lg-0" id="mainNav">
+            <li class="nav-item"><a class="nav-link" aria-currnet="page" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#individuals">Individuals</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#business">Business</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#contact">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="signupform.html" target="_blank">Signup</a></li>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Use keywords"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-default" type="submit">
+                Search
+              </button>
+            </form>
+          </ul>
+        </div>
+      </div>
+      </nav>
+    </header>
+
+    <section id="individuals" style="color:#00272b !important">
+      <div class="container-fluid reveal">
+        <h1> </h1>
+        <h1> </h1>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+              <h2 class="signupform">Witholding Taxes for Individuals</h2>
+              <h3 class="form">Buwis sa buwanang sahod</h3>
+                <div class="container-fluid ms-5">
+                    <form class="display: block">
+                        <div class="row align-items-center">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-lg-5">
+                                <div class="card">
+                              
+                                
+                                    <div class="card-body">
+                                      <div class="container-fluid">
+                                        <form action="action_page.php">
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="country"><b>Payroll Period</b></label>
+                                            </div>
+                                            <div class="col-75">
+                                              <select id="country" name="country">
+                                                <option selected disabled>Select one</option>
+                                                <option value="daily">Daily</option>
+                                                <option value="weekly">Weekly</option>
+                                                <option value="2weeks">Fortnightly</option>
+                                                <option value="monthly">Monthly</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-50">
+                                              <label for="fname"><b>Gross Compensation Income</b></label>
+                                            </div>
+                                            <div class="col-50">
+                                              <input type="text" id="fname" name="firstname" placeholder="Kabuuang kita">
+                                            </div>
+                                          </div>
+                                          <br>
+                                          <div>
+                                            <label for="fname"><b>Sources of Income</b></label>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="lname"><b>Basic Pay</b></label>
+                                            </div>
+                                            <div class="col-75">
+                                              <input type="text" id="grossIncome" name="basicPay" placeholder="Sahod">
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="grossIncome"><b>Allowances</b></label>
+                                            </div>
+                                            <div class="col-75">
+                                              <input type="text" id="grossIncome" name="grossIncome" placeholder="COLA, Representation, Transportation">
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="grossIncome"><b>Other Allowances</b></label>
+                                            </div>
+                                            <div class="col-75">
+                                              <input type="text" id="grossIncome" name="grossIncome" placeholder="Mga iba pang karagdagang allowances">
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="grossIncome"><b>Supplementary Income</b></label>
+                                            </div>
+                                            <div class="col-75">
+                                              <input type="text" id="grossIncome" name="grossIncome" placeholder="Karagdagang kita">
+                                            </div>
+                                          </div>
+                                          <br>
+                                          
+                                        </form>
+                                      </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> 
+                                
+
+                                <div class="col-lg-5">
+                                    <div class="card">
+                                      
+                                    
+                                        <div class="card-body">
+                                          <div class="container">
+                                            <form action="action_page.php">
+                                              <div>
+                                                <label for="fname" style="margin-top: 0px;"><b>Allowances</b></label>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>COLA</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Cost of living allowance">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Representation</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Transportation</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Pamasahe galing kumpanya">
+                                                </div>
+                                              </div>
+                                              
+                                              <div>
+                                                <label for="fname"><b>Supplementary Income</b></label>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Commission</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Iba't ibang profit sharing">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>13th month pay & others</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Taxable na bahagi ng 13th month pay atbp.">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Hazard pay</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Overtime pay</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="">
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>                
+                                <div class="col-lg-5  mt-3">
+                                    <div class="card">
+                                        
+                                    
+                                        <div class="card-body">
+                                          <div class="container">
+                                            <form action="action_page.php">
+                                              <div>
+                                                <label for="fname" style="margin-top: 0px;"><b>Non-taxable/exempt Compensation Income</b></label>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>MWE</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Statutory na Sahod ng Minimum Wage Earner">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>13 Month Pay atbp.</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Bahagi ng 13th Month Pay na hindi lalampas sa P90k">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>De Minimis</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Benepisyong hindi binubuwisan">
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Deductions</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="SSS/GSIS, Pag-Ibig, PHIC, Union dues">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Others</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Taxable na bahagi ng 13th month pay atbp.">
+                                                </div>
+                                              </div>
+                                              
+                                              
+                                            </form>
+                                          </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mt-3">
+                                    <div class="card">
+                                        
+                                    
+                                        <div class="card-body">
+                                          <div class="container">
+                                            <form action="action_page.php">
+                                              <div>
+                                                <label for="fname" style="margin-top: 0px;"><b>Net Taxable Compensation Income</b></label>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Gross Pay</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Bahagi ng sahod na binubuwisan">
+                                                </div>
+                                              </div>
+                                              <div>
+                                                <label for="fname" style="margin-top: 0px;"><b>Less:</b></label>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>NCI</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Non-taxable/Exempt Compensation Income">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Net Pay</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Benepisyong hindi binubuwisan">
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Tax due</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Buwanang buwis">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-4">
+                                                    <a href="index.html" class="btn btn-danger" style="color:aliceblue; width: 100px; margin: 10px">Reset</a>
+                                                </div>
+                                                <div class="col-4" class="margin-left: 30px">
+                                                  <div class="row">
+                                                    <a href="index.html" class="btn btn-info" style="color:aliceblue; width: 100px; margin: 10px">Compute</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>            
+                            </div>
+                        </div>
+                        <div class="container-fluid" style="margin-top: 40px">
+                            <h5 class="nameheader" style="text-align:center" > </h5>
+                        </div>
+                        
+                                
+                    </form>
+                </div>
+              </p>
+            </div>
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+      </div>
+    </section>
+    
+  
+    <section id="business">
+      <div class="container-fluid reveal">
+        <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                  <h2 style="margin-top: 100px; text-align: center;">Witholding Taxes for Businesses</h2>
+                  
+                    <div class="container-fluid ms-5">
+                        <form class="display: block">
+                            <div class="row align-items-center">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="col-lg-5">
+                                    <div class="card">
+                                  
+                                    
+                                        <div class="card-body2">
+                                          <div class="container">
+                                            <form action="action_page.php">
+                                              <div class="row">
+                                                <div class="col-25 mt-3">
+                                                  <label for="country"><b>Taxable Period</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <select id="country" name="country">
+                                                    <option selected disabled>Select one</option>
+                                                    <option value="1Qtr">1st Qtr</option>
+                                                    <option value="2Qtr">2nd Qtr</option>
+                                                    <option value="3Qtr">3rd Qtr</option>
+                                                    <option value="4Qtr">4th Qtr</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-50">
+                                                  <label for="grossIncome"><b>Gross Income</b></label>
+                                                </div>
+                                                <div class="col-50">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Kabuuang kita">
+                                                </div>
+                                              </div>
+                                              <br>
+                                              <div>
+                                                <label for="incomeName"><b>Sources of Income</b></label>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="lname"><b>Main Business</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="mainBusiness" placeholder="Kita ng kumpanya">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="grossIncome"><b>Other Business Income</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Mga iba pang kinita">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="interestIncome"><b>Interest Income</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="interestIncome" name="interestIncome" placeholder="Mga kinita mula sa interest">
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-25">
+                                                  <label for="miscIncome"><b>Miscellaneous Income</b></label>
+                                                </div>
+                                                <div class="col-75">
+                                                  <input type="text" id="grossIncome" name="grossIncome" placeholder="Karagdagang kita na maliliit">
+                                                </div>
+                                              </div>
+                                              <br>
+                                              
+                                            </form>
+                                          </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div> 
+                                    
+    
+                                    <div class="col-lg-5">
+                                        <div class="card">
+                                          
+                                        
+                                            <div class="card-body2">
+                                              <div class="container">
+                                                <form action="action_page.php">
+                                                  <div>
+                                                    <label for="incomeName" style="margin-top: 10px;"><b>Expenses</b></label>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="grossIncome"><b>Operating Expenses</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="opex" name="opex" placeholder="Mga gastusin sa operasyon">
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="grossIncome"><b>General and Administrative Expenses</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="gandaExpenses" name="gandaExpenses" placeholder="">
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="otex"><b>Other Expenses</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="otex" name="otex" placeholder="Iba pang malalaking gastos">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="intex"><b>Interest Expenses</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="intex" name="intex" placeholder="Mga gastusin sanhi ng Interest">
+                                                    </div>
+                                                  </div>
+                                                  <div class="row mb-3">
+                                                    <div class="col-25">
+                                                      <label for="miscExp"><b>Miscellaneous Expenses</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="miscExp" name="miscExp" placeholder="Mga maliliit na gastusin">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                
+                                                    
+                                   
+                                                  
+                                                </form>
+                                              </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 mt-3">
+                                        <div class="card">
+                                            
+                                        
+                                            <div class="card-body2">
+                                              <div class="container">
+                                                <form action="action_page.php">
+                                                  <div>
+                                                    <label for="fname" style="margin-top: 10px;"><b>Taxes Due</b></label>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="nti"><b>Net Taxable Income</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="nti" name="nti" placeholder="Bahagi ng kita na binubuwisan">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="taxRate"><b>Tax Rate</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="taxRate" name="taxRate" placeholder="% ng buwis">
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="NCIT"><b>Normal Income Tax</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="NCIT" name="NCIT" placeholder="Buwis">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="MCIT"><b>MCIT</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="MCIT" name="MCIT" placeholder="2% ng Kabuuang Kita">
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-25">
+                                                      <label for="taxDue"><b>Tax due</b></label>
+                                                    </div>
+                                                    <div class="col-75">
+                                                      <input type="text" id="taxDue" name="taxDue" placeholder="Babayarang buwis (whichever is higher)">
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col-4">
+                                                        <a href="index.html" class="btn btn-danger" style="color:aliceblue; width: 100px; margin: 10px">Reset</a>
+                                                    </div>
+                                                    <div class="col-4" class="margin-left: 40px">
+                                                      <div class="row">
+                                                        <a href="index.html" class="btn btn-info" style="color:aliceblue; width: 100px; margin: 10px">Compute</a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </form>
+                                              </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>            
+                                </div>
+                            </div>
+                            <div class="container-fluid" style="margin-top: 40px">
+                                <h5 class="nameheader" style="text-align:center" > </h5>
+                            </div>
+                            
+                                    
+                        </form>
+                    </div>
+                  </p>
+                </div>
+              
+                      
+                
+          </div>
+      </div>
+      
+    </section>
+  
+    <section id="contact">
+      <div class="container reveal">
+        <h2 style="color:#00272b !important">Contact Us</h2>
+        <img src="img/Enforcement.RD41.jpg" width="auto" alt="BIRHeadOffice" class="banner2"/>
+        <div class="text-container">
+          <div class="text-box">
+            <h3>BIR National Office</h3>
+            <p>Taxpayers with tax queries and concerns may call the Customer Assistance Division (formerly BIR Contact Center) at Hotline No. 8538-3200 or send  an email to contact_us@bir.gov.ph</p>
+            <p>BIR National Office Bldg., BIR Road, Diliman, Quezon City, Philippines</p>
+            <p>National Office Trunkline: 8981-7000 ; 8929-7676</p>
+            
+          </div>
+          <div class="text-box">
+            <h3>Client Support Service</h3>
+            <p>CSS directs the year-round customer assistance service program including nationwide tax campaigns in the National, Regional and District Offices. Revie is here to assist you!</p>
+            <p>Office Address: Room 611 6th Floor National Office Bldg. Diliman, Q.C.</p>
+            <p>CSS Trunkline: 8921-4324 loc. 7242</p> 
+            <div class="row">
+              <div class="text-center">
+                <p>Follow us!</p>
+                <a href="https://www.facebook.com/birgovph" target="_blank"
+                  ><img src="img/fb logo.png" style="width: 30px"
+                /></a>
+                <a href="https://twitter.com/birgovph" target="_blank"
+                  ><img src="img/twitter.png" style="width: 30px"
+                /></a>
+                <a href="https://www.youtube.com/+birgovphl" target="_blank"
+                  ><img src="img/youtube.png" style="width: 30px"
+                /></a>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      
+      <button class="chat-btn"> 
+          <i class="material-icons"><img src="img/revie-v2.gif" style="width: 100%"/></i>
+      </button>
+
+      <div class="chat-popup">
+          <div class="badge">
+            
+          </div>
+          <div class="chat-area">
+           <div class="income-msg">
+               <img src="img/revie-v2.gif" style="width:10%"; class="avatar" alt="">
+               <span class="msg"> Hi, How can I help you?</span>
+           </div>   
+          </div>
+
+          <div class="input-area">
+              <input type="text" id="out-msg" name="out-msg" placeholder="Write your message here">
+              <button id="emoji-btn"> &#127773;</button>
+              <button class="submit"> <i class="material-icons"> send</i></button>
+          </div>
+      </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+
+  <script src="js/index.js"></script>
+</body>
+<footer>
+    <div class="row mt-5 ms-5; " style="background-color: #061106;">
+        
+       
+        <div
+          class="col-lg-4 text-left mt-4"
+          style="color: white; font-size: 75%"
+        >
+          <p><strong>REPUBLIC OF THE PHILIPPINES</strong></p>
+          <p>All content is in the public domains<br>unless otherwise stated.</p>
+          <p>MP1 by Charmaine David 2023</p>
+          
+        </div>
+        
+          <div
+            class="col-lg-4 text-left"
+            style="color: white; font-size: 75%"
+          >
+          <div class="govPh">
+            <p><strong>ABOUT GOVPH</strong></p>
+            <p>Learn more about the Philippine government, its<br><br><br>structure, how government works and the people behing it.</p>
+            <p><strong>GOV.PH</strong></p>
+            <p>Open Data Portal</p>
+            <p>Official Gazette</p>
+          </div>
+        </div>
+        
+          <div
+            class="col-lg-4 text-left"
+            style="color: white; font-size: 75%"
+          >
+          <div class="govtLinks">
+            <p><strong>GOVERNMENT LINKS</strong></p>
+            <a href="https://president.gov.ph/" target="_blank"><p>Office of the President</p></a>
+            <a href="https://ovp.gov.ph/ " target="_blank"><p>Office of the Vice President</p></a>
+            <a href="http://legacy.senate.gov.ph/" target="_blank"><p>Senate of the Philippines</p></a>
+            <a href="https://www.congress.gov.ph/" target="_blank"><p>House of Representatives</p></a>
+            <a href="https://sc.judiciary.gov.ph/" target="_blank"><p>Supreme Court</p></a>
+            <a href="https://ca2.judiciary.gov.ph/caws-war/" target="_blank"><p>Court of Appeals</p></a>
+            <a href="https://sb.judiciary.gov.ph/" target="_blank"><p>Sandiganbayan</p></a>
+          </div>
+        </div>
+
+      </div>
+
+      
+</footer>
+
+</html>
